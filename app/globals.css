@@ -28,6 +28,7 @@ body {
   cursor: none;
 }
 
+/* Custom cursor */
 .cursor {
   width: 10px; height: 10px;
   background: var(--color-accent);
@@ -40,20 +41,40 @@ body {
 }
 .cursor.big { width: 38px; height: 38px; opacity: .22; }
 
-.cs-card-img  { transition: transform .72s cubic-bezier(.16,1,.3,1); }
+/* Case study card animations */
+.cs-card-img { transition: transform .72s cubic-bezier(.16,1,.3,1); }
 .cs-card:hover .cs-card-img { transform: scale(1.05); }
-.cs-card-desc { max-height: 0; overflow: hidden; opacity: 0; transition: max-height .55s cubic-bezier(.16,1,.3,1), opacity .4s, margin-top .4s; }
+
+.cs-card-desc {
+  max-height: 0; overflow: hidden; opacity: 0;
+  transition: max-height .55s cubic-bezier(.16,1,.3,1), opacity .4s, margin-top .4s;
+}
 .cs-card:hover .cs-card-desc { max-height: 160px; opacity: 1; margin-top: .75rem; }
-.cs-card-cta  { opacity: 0; transform: translateY(6px); transition: opacity .4s, transform .4s cubic-bezier(.16,1,.3,1); }
-.cs-card:hover .cs-card-cta  { opacity: 1; transform: translateY(0); }
+
+.cs-card-cta { opacity: 0; transform: translateY(6px); transition: opacity .4s, transform .4s cubic-bezier(.16,1,.3,1); }
+.cs-card:hover .cs-card-cta { opacity: 1; transform: translateY(0); }
+
 .cs-card-outcomes { opacity: 0; transform: translateY(6px); transition: opacity .4s .1s, transform .4s .1s cubic-bezier(.16,1,.3,1); }
 .cs-card:hover .cs-card-outcomes { opacity: 1; transform: translateY(0); }
 
+/* Contact link hover */
 .c-link { transition: border-color .18s; }
 .c-link:hover { border-color: var(--color-accent) !important; }
 .c-link:hover .c-arrow { transform: translate(3px, -3px); }
 .c-arrow { transition: transform .2s; }
+
+/* Skill chip hover — white pill, hover becomes brand blue */
 .skill-chip { transition: background .18s, border-color .18s, color .18s; }
-.skill-chip:hover { background: var(--color-accent) !important; border-color: var(--color-accent) !important; color: #fff !important; }
-.cs-tag-pill { transition: background .18s, color .18s; }
-.cs-tag-pill:hover { background: var(--color-accent) !important; color: #fff !important; }
+.skill-chip:hover {
+  background: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: #fff !important;
+}
+
+/* Case study tag pill hover */
+.cs-tag-pill { transition: background .18s, color .18s, border-color .18s; }
+.cs-tag-pill:hover {
+  background: var(--color-accent) !important;
+  color: #fff !important;
+  border-color: var(--color-accent) !important;
+}

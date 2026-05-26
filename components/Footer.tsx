@@ -6,8 +6,13 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-paper-2 border-t border-black/10 px-[52px] py-[26px] flex justify-between items-center">
-      <span className="font-body text-[12px] text-ink-3">© 2025 Dhananjay Lokhande</span>
+    <footer
+      className="border-t border-black/10 px-[52px] py-[26px] flex justify-between items-center"
+      style={{ background: "#FFFFFF" }}
+    >
+      <span className="font-body text-[12px] font-normal text-ink-3">
+        &copy; 2025 Dhananjay Lokhande
+      </span>
       <div className="flex gap-6">
         {socials.map((s) => (
           <a
@@ -15,7 +20,7 @@ export default function Footer() {
             href={s.href}
             target={s.href.startsWith("http") ? "_blank" : undefined}
             rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
-            className="font-body text-[12px] text-ink-3 no-underline hover:text-ink transition-colors"
+            className="font-body text-[12px] font-normal text-ink-3 no-underline hover:text-ink transition-colors"
           >
             {s.label}
           </a>
