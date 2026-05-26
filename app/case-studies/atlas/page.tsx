@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import AnimateIn from "@/components/AnimateIn";
-import PDFViewer from "@/components/PDFViewer";
 
 export const metadata: Metadata = {
   title: "Atlas — Enterprise MES Dashboard | Dhananjay Lokhande",
@@ -16,21 +15,18 @@ const impacts = [
     metric: "Reduction in TTD",
     detail:
       "Time to decision dropped from ~60 minutes of morning reconciliation calls to ~10 minutes of dashboard scan + targeted drill-down.",
-    icon: "⚡",
   },
   {
-    value: "≥80%",
+    value: ">=80%",
     metric: "Decisions via Atlas",
     detail:
       "Lifted the share of weekly decisions backed by Atlas data from ad-hoc reconciliation to data-driven action.",
-    icon: "📊",
   },
   {
     value: "7:30 AM",
     metric: "Ritual anchor",
     detail:
       "Atlas is anchored to the MD's existing 7:30 AM status check — it becomes the first app he opens, ahead of email.",
-    icon: "🎯",
   },
 ];
 
@@ -40,50 +36,48 @@ export default function AtlasPage() {
   return (
     <div className="pt-[58px] bg-paper">
 
-      {/* ── Back ── */}
+      {/* Back */}
       <div className="max-w-[1200px] mx-auto px-[52px] pt-10 pb-0">
         <Link
           href="/#work"
           className="inline-flex items-center gap-2 font-body text-[12px] font-medium text-ink-3 no-underline hover:text-ink transition-colors tracking-[.04em] uppercase"
         >
-          ← All Work
+          &larr; All Work
         </Link>
       </div>
 
-      {/* ── Hero ── */}
+      {/* Hero */}
       <AnimateIn className="max-w-[1200px] mx-auto px-[52px] pt-10 pb-16">
-        {/* Tags */}
         <div className="flex gap-2 flex-wrap mb-6">
           {tags.map((t, i) => (
             <span key={t}
               className={`font-body text-[10px] font-medium tracking-[.08em] uppercase px-3 py-1.5 rounded-[2px] ${
-                i === 0 ? "bg-green text-white" : "bg-black/06 text-ink-2 border border-black/[.12]"
+                i === 0
+                  ? "bg-green text-white"
+                  : "bg-black/06 text-ink-2 border border-black/[.12]"
               }`}>
               {t}
             </span>
           ))}
           <span className="font-body text-[10px] font-medium text-ink-3 tracking-[.06em] uppercase self-center ml-1">
-            Product Armor · 2022–2024
+            Product Armor &middot; 2022&ndash;2024
           </span>
         </div>
 
-        {/* Title */}
         <h1
           className="font-display font-normal text-ink tracking-[-0.04em] leading-[1.0] mb-6"
           style={{ fontSize: "clamp(40px,6vw,76px)" }}
         >
-          Atlas — Enterprise<br />
+          Atlas &mdash; Enterprise<br />
           <em className="italic text-accent">MES Dashboard</em>
         </h1>
 
-        {/* Summary */}
         <p className="font-body text-[18px] font-light text-ink-2 max-w-[680px] leading-[1.75] mb-10">
           Collapsed 45 minutes of manual morning reconciliation into a single, glanceable decision surface
-          for the Managing Director of a 100%-automated pharma packaging plant —
+          for the Managing Director of a 100%-automated pharma packaging plant &mdash;
           replacing eight fragmented vertical reports with one trusted screen.
         </p>
 
-        {/* Meta row */}
         <div className="flex gap-10 flex-wrap border-t border-black/08 pt-8">
           {[
             { label: "Role",     value: "UI/UX Designer" },
@@ -100,25 +94,26 @@ export default function AtlasPage() {
         </div>
       </AnimateIn>
 
-      {/* ── Hero Image ── */}
+      {/* Hero Image */}
       <AnimateIn direction="none" className="max-w-[1200px] mx-auto px-[52px] mb-20">
-        <div className="relative w-full rounded-[6px] overflow-hidden border border-black/08 shadow-[0_8px_48px_rgba(0,0,0,0.10)]"
-          style={{ height: "clamp(340px,50vw,620px)" }}>
+        <div
+          className="relative w-full rounded-[6px] overflow-hidden border border-black/08 shadow-[0_8px_48px_rgba(0,0,0,0.10)]"
+          style={{ height: "clamp(340px,50vw,620px)" }}
+        >
           <Image
             src="/images/atlas-hero.png"
-            alt="Atlas Dashboard — Decision Surface"
+            alt="Atlas Dashboard Decision Surface"
             fill
             className="object-cover object-top"
             priority
           />
-          {/* subtle label */}
           <div className="absolute bottom-4 left-4 bg-black/50 backdrop-blur-[8px] text-white/80 font-body text-[11px] tracking-[.06em] uppercase px-3 py-1.5 rounded-[2px]">
-            Atlas · Decision Surface
+            Atlas &middot; Decision Surface
           </div>
         </div>
       </AnimateIn>
 
-      {/* ── Impact Metrics ── */}
+      {/* Impact Metrics */}
       <section className="bg-paper-2 border-y border-black/08">
         <div className="max-w-[1200px] mx-auto px-[52px] py-16">
           <AnimateIn>
@@ -126,8 +121,10 @@ export default function AtlasPage() {
               <span className="block w-6 h-px bg-ink-3" />
               <span className="font-body text-[11px] font-medium text-ink-3 tracking-[.14em] uppercase">Impact</span>
             </div>
-            <h2 className="font-display font-normal tracking-[-0.03em] text-ink leading-[1.05] mb-10"
-              style={{ fontSize: "clamp(28px,4vw,42px)" }}>
+            <h2
+              className="font-display font-normal tracking-[-0.03em] text-ink leading-[1.05] mb-10"
+              style={{ fontSize: "clamp(28px,4vw,42px)" }}
+            >
               Design to compress<br /><em className="italic text-accent">decision time</em>
             </h2>
           </AnimateIn>
@@ -139,15 +136,16 @@ export default function AtlasPage() {
                   <div className="font-body text-[11px] font-medium text-white/50 tracking-[.1em] uppercase mb-4">
                     0{i + 1}
                   </div>
-                  <div className="font-display font-normal text-white leading-none tracking-[-0.04em] mb-2"
-                    style={{ fontSize: "clamp(28px,3.5vw,42px)" }}>
+                  <div
+                    className="font-display font-normal text-white leading-none tracking-[-0.04em] mb-2"
+                    style={{ fontSize: "clamp(28px,3.5vw,42px)" }}
+                  >
                     {imp.value}
                   </div>
                   <div className="font-body text-[14px] font-medium text-white mb-4">{imp.metric}</div>
                   <p className="font-body text-[13px] font-light text-white/65 leading-[1.65] mt-auto">{imp.detail}</p>
-
                   <div className="border-t border-white/20 pt-4 mt-6">
-                    <span className="font-body text-[11px] text-green-lt/60 tracking-[.06em] uppercase">
+                    <span className="font-body text-[11px] text-white/40 tracking-[.06em] uppercase">
                       {["Plant Intelligence", "Correlation Engine", "Drift Surfacing"][i]}
                     </span>
                   </div>
@@ -158,7 +156,7 @@ export default function AtlasPage() {
         </div>
       </section>
 
-      {/* ── Quick Context ── */}
+      {/* Context */}
       <section className="bg-paper">
         <div className="max-w-[1200px] mx-auto px-[52px] py-16">
           <div className="grid grid-cols-2 gap-16">
@@ -174,10 +172,10 @@ export default function AtlasPage() {
               </p>
               <blockquote className="mt-6 pl-5 border-l-2 border-accent">
                 <p className="font-display italic text-[17px] text-ink-2 leading-[1.65]">
-                  &ldquo;I don&apos;t need more data. I need one definition of every number — with the drift surfaced before it becomes a crisis.&rdquo;
+                  &ldquo;I don&apos;t need more data. I need one definition of every number &mdash; with the drift surfaced before it becomes a crisis.&rdquo;
                 </p>
                 <cite className="block mt-2 font-body text-[12px] not-italic text-ink-3 tracking-[.08em] uppercase">
-                  Mr. Harsha · MD, Product Armor
+                  Mr. Harsha &middot; MD, Product Armor
                 </cite>
               </blockquote>
             </AnimateIn>
@@ -188,21 +186,21 @@ export default function AtlasPage() {
                 <span className="font-body text-[11px] font-medium text-ink-3 tracking-[.14em] uppercase">The Solution</span>
               </div>
               <p className="font-body text-[16px] font-light text-ink-2 leading-[1.8]">
-                A <strong className="text-ink font-medium">glanceable decision surface</strong> — not a reporting wall.
+                A <strong className="text-ink font-medium">glanceable decision surface</strong> &mdash; not a reporting wall.
                 Atlas surfaces cross-vertical drifts as correlated stories, ranks them by impact,
                 and gives the MD one trusted screen to start every morning.
               </p>
               <div className="mt-6 flex flex-col gap-3">
                 {[
-                  { label: "Exception-first", desc: "Surface only deviations — healthy KPIs don't need real estate" },
-                  { label: "Variance over absolutes", desc: "↓12% vs last week matters more than ₹2.4 Cr" },
-                  { label: "Cross-vertical correlation", desc: "Sales + Quality + Production = one connected story" },
+                  { label: "Exception-first",          desc: "Surface only deviations — healthy KPIs don't need real estate" },
+                  { label: "Variance over absolutes",   desc: "12% drop vs last week matters more than the absolute number" },
+                  { label: "Cross-vertical correlation",desc: "Sales + Quality + Production = one connected story" },
                 ].map((p) => (
                   <div key={p.label} className="flex gap-3 items-start">
-                    <span className="text-accent flex-shrink-0 mt-0.5 text-[13px]">—</span>
+                    <span className="text-accent flex-shrink-0 mt-0.5 text-[13px]">&mdash;</span>
                     <div>
                       <span className="font-body text-[13px] font-medium text-ink">{p.label}</span>
-                      <span className="font-body text-[13px] font-light text-ink-3"> — {p.desc}</span>
+                      <span className="font-body text-[13px] font-light text-ink-3"> &mdash; {p.desc}</span>
                     </div>
                   </div>
                 ))}
@@ -212,33 +210,53 @@ export default function AtlasPage() {
         </div>
       </section>
 
-      {/* ── Full Case Study PDF ── */}
+      {/* Deep Dive — PDF CTA */}
       <section className="bg-paper-2 border-t border-black/08">
         <div className="max-w-[1200px] mx-auto px-[52px] py-16">
           <AnimateIn>
             <div className="flex items-center gap-3 mb-3">
               <span className="block w-6 h-px bg-ink-3" />
-              <span className="font-body text-[11px] font-medium text-ink-3 tracking-[.14em] uppercase">Full Case Study</span>
+              <span className="font-body text-[11px] font-medium text-ink-3 tracking-[.14em] uppercase">Deep Dive</span>
             </div>
-            <h2 className="font-display font-normal tracking-[-0.03em] text-ink leading-[1.05] mb-8"
-              style={{ fontSize: "clamp(26px,3.5vw,38px)" }}>
-              Deep dive — <em className="italic text-accent">research to outcome</em>
+            <h2
+              className="font-display font-normal tracking-[-0.03em] text-ink leading-[1.05] mb-8"
+              style={{ fontSize: "clamp(26px,3.5vw,38px)" }}
+            >
+              Full case study &mdash; <em className="italic text-accent">research to outcome</em>
             </h2>
           </AnimateIn>
+
           <AnimateIn delay={0.05}>
-            <PDFViewer
-              src="/case-studies/atlas-case-study.pdf"
-              title="Atlas Case Study — Product Armor 2024"
-            />
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-8 bg-white rounded-[4px] border border-black/10">
+              <div className="flex-1">
+                <p className="font-body text-[15px] font-medium text-ink mb-1.5">
+                  Atlas Case Study &mdash; Product Armor 2024
+                </p>
+                <p className="font-body text-[13px] font-light text-ink-3 leading-[1.6]">
+                  Full documentation of research, strategy, design decisions and outcomes &mdash;
+                  from the MD&apos;s morning problem to a correlated decision surface.
+                </p>
+              </div>
+              <a
+                href="/case-studies/atlas-case-study.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body text-[12px] font-medium tracking-[.08em] uppercase bg-ink text-white px-7 py-3.5 rounded-[2px] no-underline hover:bg-accent transition-colors whitespace-nowrap"
+              >
+                View Case Study
+              </a>
+            </div>
           </AnimateIn>
         </div>
       </section>
 
-      {/* ── Nav ── */}
+      {/* Bottom nav */}
       <div className="max-w-[1200px] mx-auto px-[52px] py-12 flex justify-between items-center border-t border-black/08">
-        <Link href="/#work"
-          className="font-body text-[12px] font-medium text-ink-3 no-underline hover:text-ink transition-colors tracking-[.04em] uppercase">
-          ← All Case Studies
+        <Link
+          href="/#work"
+          className="font-body text-[12px] font-medium text-ink-3 no-underline hover:text-ink transition-colors tracking-[.04em] uppercase"
+        >
+          &larr; All Case Studies
         </Link>
         <p className="font-body text-[13px] text-ink-3">More case studies coming soon</p>
       </div>
