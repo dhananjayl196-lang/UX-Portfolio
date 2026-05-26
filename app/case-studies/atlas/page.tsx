@@ -227,7 +227,7 @@ export default function AtlasPage() {
           </AnimateIn>
           <AnimateIn delay={0.05}>
             <PDFViewer
-              src="/case-studies/Case%20Study.pdf"
+              src="/case-studies/atlas-case-study.pdf"
               title="Atlas Case Study — Product Armor 2024"
             />
           </AnimateIn>
