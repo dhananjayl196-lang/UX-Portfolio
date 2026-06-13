@@ -130,7 +130,7 @@ export default function VideoPlayer({
 
       {/* ── Content area ──────────────────────────────────────────────── */}
       {showSlides ? (
-        <div className="relative overflow-hidden border border-zinc-200" style={{ background: "#f4f4f5" }}>
+        <div className="relative border border-zinc-200" style={{ background: "#f4f4f5", aspectRatio: "16/9", overflow: "hidden" }}>
 
           {/* Step + title pill */}
           <div className="absolute top-4 left-4 z-10">
@@ -158,20 +158,27 @@ export default function VideoPlayer({
           </div>
 
           {/* Fading image */}
-          <div style={{ opacity: visible ? 1 : 0, transition: `opacity ${FADE_DURATION}ms ease-in-out` }}>
+          <div
+            style={{
+              opacity: visible ? 1 : 0,
+              transition: `opacity ${FADE_DURATION}ms ease-in-out`,
+              width: "100%",
+              height: "100%",
+              position: "relative",
+            }}
+          >
             <Image
               src={slide.src}
               alt={`${slide.step} – ${slide.title}`}
-              width={1200}
-              height={750}
-              className="w-full block"
+              fill
+              className="object-contain"
             />
           </div>
         </div>
       ) : (
         <div
-          className="relative overflow-hidden cursor-pointer border border-zinc-200"
-          style={{ background: "transparent" }}
+          className="relative cursor-pointer border border-zinc-200"
+          style={{ background: "transparent", maxHeight: "560px", overflow: "hidden" }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >

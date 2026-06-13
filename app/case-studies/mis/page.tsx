@@ -6,6 +6,7 @@
 import Image from "next/image";
 import { Syne, Inter } from "next/font/google";
 import VideoPlayer from "./VideoPlayer";
+import SideNav from "./SideNav";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -72,36 +73,12 @@ export default function MISCaseStudy() {
       {/* ══════════════════════════════════════════════════════════
           NAV
       ══════════════════════════════════════════════════════════ */}
-      <nav className="fixed top-[58px] left-0 right-0 z-[150] bg-white/95 backdrop-blur-sm border-b border-zinc-100 h-14">
-        <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
-          <a href="#top" className="text-sm font-bold tracking-tight flex-shrink-0"
-            style={{ color: "#00418F", fontFamily: "var(--font-syne), sans-serif" }}>
-            MIS Redesign
-          </a>
-          <div className="flex items-center gap-0.5 overflow-x-auto pl-6">
-            {[
-              { href: "#s01", label: "01 Intro" },
-              { href: "#s02", label: "02 Problem" },
-              { href: "#s03", label: "03 Audit" },
-              { href: "#s04", label: "04 Personas" },
-              { href: "#s05", label: "05 Insights" },
-              { href: "#s07", label: "06 Design" },
-              { href: "#s08", label: "07 System" },
-              { href: "#s09", label: "08 Impact" },
-            ].map((item) => (
-              <a key={item.href} href={item.href}
-                className="px-3 py-1.5 text-xs font-semibold text-zinc-400 hover:text-zinc-900 hover:bg-zinc-50 transition-all whitespace-nowrap">
-                {item.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      </nav>
+      <SideNav />
 
       {/* ══════════════════════════════════════════════════════════
           HERO
       ══════════════════════════════════════════════════════════ */}
-      <section id="top" className="pt-[114px] pb-20 bg-white border-b border-zinc-100">
+      <section id="top" className="pt-[90px] pb-20 bg-white border-b border-zinc-100">
         <div className="max-w-6xl mx-auto px-8 pt-12">
           <div className="flex items-center gap-3 mb-12">
             <span className="text-xs font-bold tracking-widest uppercase text-zinc-600">UX / Product Design</span>
@@ -586,12 +563,12 @@ export default function MISCaseStudy() {
                 <VideoPlayer
                   videoSrc="/videos/student-transfer.webm"
                   fallbackSlides={[
-                    { step: "Step 01", title: "Initiate through Quick Action", src: "/images/student-transfer/Step-01.png" },
-                    { step: "Step 02", title: "Select Transfer type In/Out", src: "/images/student-transfer/Step-02.png" },
-                    { step: "Step 03", title: "Step by Step guided process", src: "/images/student-transfer/Step-03.png" },
-                    { step: "Step 04", title: "No need of any physical records", src: "/images/student-transfer/Step-04.png" },
-                    { step: "Step 05", title: "Easy admit process", src: "/images/student-transfer/Step-05.png" },
-                    { step: "Step 06", title: "Freedom to choose in edge cases", src: "/images/student-transfer/Step-06.png" },
+                    { step: "Step 01", title: "Initiate through Quick Action", src: "/images/student-transfer/step-01.png" },
+                    { step: "Step 02", title: "Select Transfer type In/Out", src: "/images/student-transfer/step-02.png" },
+                    { step: "Step 03", title: "Step by Step guided process", src: "/images/student-transfer/step-03.png" },
+                    { step: "Step 04", title: "No need of any physical records", src: "/images/student-transfer/step-04.png" },
+                    { step: "Step 05", title: "Easy admit process", src: "/images/student-transfer/step-05.png" },
+                    { step: "Step 06", title: "Freedom to choose in edge cases", src: "/images/student-transfer/step-06.png" },
                   ]}
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-zinc-100">
