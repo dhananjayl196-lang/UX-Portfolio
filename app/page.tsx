@@ -262,11 +262,113 @@ export default function Home() {
             </Link>
           </AnimateIn>
 
+          {/* MIS card */}
+          <AnimateIn delay={0.08} className="mt-6">
+            <Link
+              href="/case-studies/mis"
+              className="cs-card block relative rounded-[4px] overflow-hidden no-underline"
+              style={{ height: 520 }}
+            >
+              {/* Left accent bar */}
+              <div className="absolute left-0 top-0 bottom-0 w-1 z-[3]" style={{ background: "#225395" }} />
+
+              {/* Hero image */}
+              <div className="cs-card-img absolute inset-0">
+                <Image
+                  src="/images/mis-hero.png"
+                  alt="MIS Registry Management System"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+
+              {/* Gradient overlay */}
+              <div
+                className="absolute inset-0 z-[1]"
+                style={{ background: "linear-gradient(to top,rgba(8,8,24,.95) 0%,rgba(8,8,24,.58) 44%,rgba(8,8,24,.15) 76%,transparent 100%)" }}
+              />
+
+              {/* Card content */}
+              <div className="absolute inset-0 z-[2] p-11 flex flex-col justify-between">
+
+                {/* TOP — blue chip tags + index */}
+                <div className="flex justify-between items-start">
+                  <div className="flex gap-2 flex-wrap">
+                    {["B2B SaaS", "RMS System"].map((t) => (
+                      <span
+                        key={t}
+                        className="font-body text-[11px] font-medium tracking-[.06em] uppercase text-white px-3.5 py-1.5 rounded-full"
+                        style={{ background: "#225395" }}
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <span
+                    className="font-display font-normal leading-none tracking-[-0.04em]"
+                    style={{ fontSize: 52, color: "rgba(255,255,255,0.08)" }}
+                  >
+                    02
+                  </span>
+                </div>
+
+                {/* BOTTOM */}
+                <div>
+                  {/* Impact pills — appear on hover */}
+                  <div className="cs-card-outcomes flex flex-row flex-nowrap gap-2 mb-4">
+                    {[
+                      "Increase in data completion",
+                      "Increase in Adoption",
+                      "Reduced task completion time",
+                    ].map((label) => (
+                      <div
+                        key={label}
+                        className="font-body text-[12px] font-medium text-ink bg-white px-3.5 py-1.5 rounded-full whitespace-nowrap"
+                      >
+                        {label}
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="font-body text-[11px] font-medium tracking-[.1em] uppercase mb-2" style={{ color: "rgba(255,255,255,0.45)" }}>
+                    Convegenius AI &middot; 2024&ndash;2025
+                  </p>
+
+                  <h3
+                    className="font-display font-semibold text-white tracking-[-0.03em] leading-[1.08]"
+                    style={{ fontSize: "clamp(24px,3.2vw,38px)" }}
+                  >
+                    MIS &mdash; Registry Management System
+                  </h3>
+
+                  <p
+                    className="cs-card-desc font-body font-medium leading-[1.68] max-w-[620px]"
+                    style={{ fontSize: "15px", color: "rgba(255,255,255,0.68)" }}
+                  >
+                    MIS (Management Information System) is a centralised digital platform used by
+                    the education ecosystem across India to manage large-scale data across six
+                    critical domains.
+                  </p>
+
+                  <div className="cs-card-cta flex items-center gap-2.5 mt-5">
+                    <span className="font-body text-[11px] font-medium text-white tracking-[.1em] uppercase">View Case Study</span>
+                    <div
+                      className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm"
+                      style={{ background: "#225395" }}
+                    >
+                      &#8594;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </AnimateIn>
+
           {/* Coming soon */}
           <AnimateIn delay={0.1} className="mt-1">
             <div className="h-[160px] rounded-[4px] border-[1.5px] border-dashed border-black/18 flex flex-col items-center justify-center gap-1.5">
               <p className="font-body text-[13px] font-medium text-ink-3">More case studies coming soon</p>
-              <p className="font-body text-[12px] text-black/30">SwiftChat &middot; S-MIS &middot; Apollo AR App</p>
+              <p className="font-body text-[12px] text-black/30">SwiftChat &middot; Apollo AR App</p>
             </div>
           </AnimateIn>
         </div>

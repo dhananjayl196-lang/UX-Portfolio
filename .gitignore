@@ -22,3 +22,6 @@
 *.pem
 next-env.d.ts
 *.tsbuildinfo
+
+*storybook.log
+storybook-static
