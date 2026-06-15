@@ -355,7 +355,7 @@ export default function MISCaseStudy() {
                 <div className="p-4" style={{ background: "#E6F2FF" }}>
                   <p className="text-xs font-bold tracking-wider uppercase text-zinc-600 mb-3">Key pains</p>
                   <ul className="space-y-2">
-                    {["Can't complete tasks in one go. Loses context after every interruption.", "No recovery path. Fear of mistakes leads to inaction.", "Keeps paper backups because the system offers no confidence."].map((pain) => (
+                    {["Cannot save progress in case of unavoidable interruptions", "System does not help in quick task completions and errors", "Has to maintain multiple records in excel.", "Lots of errors and missing data during bulk uploads.", "Stressed due to last minute task completions and keeping track of all update"].map((pain) => (
                       <li key={pain} className="flex gap-2 items-start text-sm text-zinc-700"><span style={{ color: "#00418F", lineHeight: "1.6" }}>&#x2022;</span><span>{pain}</span></li>
                     ))}
                   </ul>
@@ -363,7 +363,7 @@ export default function MISCaseStudy() {
                 <div className="p-4" style={{ background: "#E6F2FF" }}>
                   <p className="text-xs font-bold tracking-wider uppercase text-zinc-600 mb-3">Core needs</p>
                   <ul className="space-y-2">
-                    {["Guided flows that hold progress across sessions.", "Clear visibility of what's pending and what's done.", "Enough system feedback to work without a safety net."].map((need) => (
+                    {["Perform regular tasks with ease and less time", "Spend less time on data entry", "Have minimum error and correction cycles"].map((need) => (
                       <li key={need} className="flex gap-2 items-start text-sm text-zinc-700"><span style={{ color: "#00418F", lineHeight: "1.6" }}>&#x2022;</span><span>{need}</span></li>
                     ))}
                   </ul>
@@ -392,7 +392,7 @@ export default function MISCaseStudy() {
                 <div className="p-4" style={{ background: "#E6F2FF" }}>
                   <p className="text-xs font-bold tracking-wider uppercase text-zinc-600 mb-3">Key pains</p>
                   <ul className="space-y-2">
-                    {["No district-level view. Blind to the bigger picture.", "Row-by-row interactions make bulk tasks exhausting.", "Switches between Excel and MIS constantly to get work done."].map((pain) => (
+                    {["Repetitive data entry task causes fatigue", "Has to maintain multiple records in excel.", "Difficulty in keeping track of all update", "Using alternative application for communicating rejection reason."].map((pain) => (
                       <li key={pain} className="flex gap-2 items-start text-sm text-zinc-700"><span style={{ color: "#00418F", lineHeight: "1.6" }}>&#x2022;</span><span>{pain}</span></li>
                     ))}
                   </ul>
@@ -400,7 +400,7 @@ export default function MISCaseStudy() {
                 <div className="p-4" style={{ background: "#E6F2FF" }}>
                   <p className="text-xs font-bold tracking-wider uppercase text-zinc-600 mb-3">Core needs</p>
                   <ul className="space-y-2">
-                    {["Holistic overview of all schools in one place.", "Bulk actions and approvals without repetition.", "One system to replace all local copies and workarounds."].map((need) => (
+                    {["Managing data of entire district with ease.", "Taking informed decision of approval and rejection with ease", "Avoiding delays in major task initiation", "Keeping a track of the data & task completion with ease"].map((need) => (
                       <li key={need} className="flex gap-2 items-start text-sm text-zinc-700"><span style={{ color: "#00418F", lineHeight: "1.6" }}>&#x2022;</span><span>{need}</span></li>
                     ))}
                   </ul>
