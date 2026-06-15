@@ -89,7 +89,7 @@ export default function MISCaseStudy() {
           </div>
           <h1 className="text-5xl lg:text-7xl font-bold leading-[1.08] tracking-tight mb-6 max-w-5xl"
             style={{ color: "#00418F", fontFamily: "var(--font-syne), sans-serif" }}>
-            Redesigning the tools that help India&apos;s educators lead, teach, and manage with confidence.
+            Information Management System Redesign
           </h1>
           <p className="text-xl text-zinc-700 mb-12 max-w-2xl leading-relaxed italic"
             style={{ fontFamily: "var(--font-syne), sans-serif" }}>
