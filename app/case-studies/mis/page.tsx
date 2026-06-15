@@ -234,7 +234,7 @@ export default function MISCaseStudy() {
             </div>
           </div>
           <div className="mb-12">
-            <p className="text-xs font-bold tracking-widest uppercase text-zinc-600 mb-5">Six systemic issues at the root</p>
+            <p className="text-xs font-bold tracking-widest uppercase text-zinc-600 mb-5">Four systemic issues at the root</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 { num: "01", tag: "Root cause", title: "CRUD-centric architecture", desc: "Built for data management, not task completion." },
@@ -258,21 +258,6 @@ export default function MISCaseStudy() {
               &ldquo;Users weren&apos;t failing because they lacked skill. They were failing because the system gave them no guidance, no feedback, and no way to recover when things went wrong.&rdquo;
             </p>
           </blockquote>
-          <div className="border-t border-zinc-200 pt-10">
-            <p className="text-xs font-bold tracking-widest uppercase text-zinc-600 mb-5">Success matrix</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {[
-                { title: "Faster task completion", desc: "For Principals and Admins handling daily and periodic workflows" },
-                { title: "Higher system adoption", desc: "Reduce dependency on Excel and paper-based workarounds" },
-                { title: "Fewer errors & less support load", desc: "Reduce backend corrections and reliance on external help" },
-              ].map((item) => (
-                <HoverCard key={item.title} className="p-6 text-center">
-                  <p className="text-sm font-semibold text-zinc-900 mb-1">{item.title}</p>
-                  <p className="text-xs text-zinc-700">{item.desc}</p>
-                </HoverCard>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
@@ -506,9 +491,27 @@ export default function MISCaseStudy() {
               </HoverCard>
             </div>
           </div>
+
+          {/* Success matrix */}
+          <div className="border-t border-zinc-100 pt-10 mt-10">
+            <p className="text-xs font-bold tracking-widest uppercase text-zinc-600 mb-5">Success matrix</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                { title: "Faster task completion", desc: "For Principals and Admins handling daily and periodic workflows" },
+                { title: "Higher system adoption", desc: "Reduce dependency on Excel and paper-based workarounds" },
+                { title: "Fewer errors & less support load", desc: "Reduce backend corrections and reliance on external help" },
+              ].map((item) => (
+                <HoverCard key={item.title} className="p-6 text-center">
+                  <p className="text-sm font-semibold text-zinc-900 mb-1">{item.title}</p>
+                  <p className="text-xs text-zinc-700">{item.desc}</p>
+                </HoverCard>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
-
+      ══════════════════════════════════════════════════════════ */}
       {/* ══════════════════════════════════════════════════════════
           S07 — DESIGN DECISIONS (06 in nav)
       ══════════════════════════════════════════════════════════ */}
